@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="hybrid.listeners"/>
+    <listener class-name="resources.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="5" name="Login Iteration Test(failed)">
+    <classes>
+      <class name="hybrid.MainTest">
+        <methods>
+          <include name="initialze"/>
+          <include name="homePage" invocation-numbers="0 1 2"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- hybrid.MainTest -->
+    </classes>
+  </test> <!-- Login Iteration Test(failed) -->
+  <test thread-count="5" name="Heading Assertion(failed)">
+    <classes>
+      <class name="hybrid.AssertionTestHeading">
+        <methods>
+          <include name="tearDown"/>
+          <include name="Text"/>
+          <include name="initialze"/>
+        </methods>
+      </class> <!-- hybrid.AssertionTestHeading -->
+    </classes>
+  </test> <!-- Heading Assertion(failed) -->
+</suite> <!-- Failed suite [Suite] -->
